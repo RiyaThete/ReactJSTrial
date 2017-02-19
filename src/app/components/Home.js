@@ -11,6 +11,7 @@ export class Home extends React.Component {
             status: 1,
             newHomeLink: props.oldHomeLink
         };
+
         setTimeout(()=> {
             this.setState(
                 {status: 99}
