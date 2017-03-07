@@ -2,22 +2,22 @@
  * Created by riya on 19/2/17.
  */
 import React from "react";
+import {Link} from "react-router"
 
-export class Header extends React.Component {
-    render() {
-        return (
-            <nav className="navbar navbar-default">
-                <div className="container">
-                    <div className="navbar-header">
-                        <ul className="nav navbar-nav">
-                            <li><a href="#">{this.props.initialHomeLink}</a></li>
-                            <li><a href="#">User</a></li>
-                        </ul>
+export const Header = (props)=> {
 
-                    </div>
+    return (
+        <nav className="navbar navbar-default">
+            <div className="container">
+                <div className="navbar-header">
+                    <ul className="nav navbar-nav">
+                        <li><Link to="/home" activeStyle={{color:"red"}}>Home</Link></li>
+                        <li><Link to="/user/4" activeClassName={"active"}>User</Link></li>
+                    </ul>
+
                 </div>
-            </nav>
-        );
-    }
-}
+            </div>
+        </nav>
+    );
+};
 

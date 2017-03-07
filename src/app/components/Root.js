@@ -10,6 +10,7 @@ export class Root extends React.Component {
         return (
             <div className="container">
                 <Header/>
+                <hr/>
                 {this.props.children}
             </div>
         )

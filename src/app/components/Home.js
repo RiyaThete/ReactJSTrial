@@ -7,7 +7,7 @@ export class Home extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            age: props.age,
+            age: 12,
             status: 1,
             newHomeLink: props.oldHomeLink
         };
