@@ -28,19 +28,17 @@ export class Home extends React.Component {
     }
 
     changeHomeLink() {
-        "use strict";
         this.props.changeHomeLink(this.state.newHomeLink)
     }
 
     updateTextBoxValue(event) {
-        "use strict";
         this.setState({
             newHomeLink: event.target.value
         });
     }
 
     render() {
-        var title = "Title";
+        var title = "Home";
         return (
             <div>
                 <p>In a New Component {title}</p>

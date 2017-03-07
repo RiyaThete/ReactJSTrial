@@ -3,14 +3,16 @@
  */
 import React from "react";
 import {render} from "react-dom";
-import {Header} from "./components/Header";
+import {Router,Route,browserHistory,IndexRoute} from "react-router"
 import {Home} from "./components/Home";
+import {User} from "./components/User";
+import {Header} from "./components/Header";
+import {Root} from "./components/Root";
 class App extends React.Component {
     constructor(props) {
-        "use strict";
         super();
         this.state = {
-            initialHomeLink: "UnChanged Link"
+            initialHomeLink: "Link 1"
         }
     }
 
@@ -26,6 +28,18 @@ class App extends React.Component {
         );
     }
 
+    //render() {
+    //    return (
+    //        <Router history={browserHistory}>
+    //            <Route path={"/"} component={Root}>
+    //                <Route path={"user"} component={User}/>
+    //                <Route path={"home"} component={Home}/>
+    //            </Route>
+    //            <Route path={"home-single"} component={Home}/>
+    //        </Router>
+    //    );
+    //}
+
     render() {
         return (
             <div className="container">
@@ -36,7 +50,9 @@ class App extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home name="Ria" age={12} greet={this.onGreet}
+                        <Home name="Ria"
+                              age={12}
+                              greet={this.onGreet}
                               changeHomeLink={this.onChangeHomeLink.bind(this)}
                               oldHomeLink={this.state.initialHomeLink}
                             />
